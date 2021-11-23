@@ -1,0 +1,4 @@
+python test_one_image.py --isTrain false --name people --Arc_path arcface_model/arcface_checkpoint.tar --pic_a_path crop_224/6.jpg --pic_b_path crop_224/ds.jpg --output_path output/
+python test_one_image.py --isTrain false --name people --Arc_path arcface_model/arcface_checkpoint.tar --pic_a_path crop_224/berni-front.jpg --pic_b_path crop_224/zxy.jpg --output_path output/
+python test_wholeimage_swapsingle.py --isTrain false --use_mask  --name people --Arc_path arcface_model/arcface_checkpoint.tar --pic_a_path ./demo_file/Iron_man.jpg --pic_b_path ./demo_file/multi_people.jpg --output_path ./output/
+
