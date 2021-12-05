@@ -20,7 +20,7 @@ class BaseOptions():
         self.parser.add_argument('--verbose', action='store_true', default=False, help='toggles verbose')
         self.parser.add_argument('--fp16', action='store_true', default=False, help='train with AMP')
         self.parser.add_argument('--local_rank', type=int, default=0, help='local rank for distributed training')
-        self.parser.add_argument('--isTrain', type=bool, default=True, help='local rank for distributed training')
+        self.parser.add_argument('--isTrain', type=bool, default=False, help='local rank for distributed training')
 
         # input/output sizes       
         self.parser.add_argument('--batchSize', type=int, default=8, help='input batch size')
