@@ -1,3 +1,11 @@
+'''
+Author: Naiyuan liu
+Github: https://github.com/NNNNAI
+Date: 2021-11-23 17:03:58
+LastEditors: Naiyuan liu
+LastEditTime: 2021-11-24 19:19:52
+Description: 
+'''
 import os 
 import cv2
 import glob
@@ -79,6 +87,7 @@ def video_swap(video_path, id_vetor, swap_model, detect_model, save_path, temp_r
                     frame_align_crop_tenor = _totensor(cv2.cvtColor(frame_align_crop,cv2.COLOR_BGR2RGB))[None,...].cuda()
 
                     swap_result = swap_model(None, frame_align_crop_tenor, id_vetor, None, True)[0]
+                    cv2.imwrite(os.path.join(temp_results_dir, 'frame_{:0>7d}.jpg'.format(frame_index)), frame)
                     swap_result_list.append(swap_result)
                     frame_align_crop_tenor_list.append(frame_align_crop_tenor)
 
